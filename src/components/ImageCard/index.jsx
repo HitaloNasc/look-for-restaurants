@@ -1,30 +1,42 @@
-import theme from "../../theme"
-import React from "react"
-import styled from 'styled-components'
-
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import theme from '../../theme';
+import Skeleton from '../Skeleton';
 
 const Card = styled.div`
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    width: 90px;
-    height: 90px;
-    border-radius: 6px;
-    background-image: url(${props => props.photo});
-    background-size: cover;
-`
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+  background-image: url(${(props) => props.photo});
+  background-size: cover;
+`;
 const Title = styled.p`
-    font-family: ${theme.fonts.regular};
-    color: #ffffff;
-    font-size: 16px;
-`
+  font-family: ${theme.fonts.regular};
+  color: #ffffff;
+  font-size: 16px;
+`;
 
 const ImageCard = ({ photo, title }) => {
-    return (
+  const [imageLoaded, setImageLoaded] = useState(false);
+  useEffect(() => {
+    const imageLoader = new Image();
+    imageLoader.src = photo;
+    imageLoader.onload = () => setImageLoaded(true);
+  }, [photo]);
+  return (
+    <>
+      {imageLoaded ? (
         <Card photo={photo}>
-            <Title>{title}</Title>
+          <Title>{title}</Title>
         </Card>
-    )
-}
+      ) : (
+        <Skeleton width="90px" heigth="90px" />
+      )}
+    </>
+  );
+};
 
-export default ImageCard
+export default ImageCard;
