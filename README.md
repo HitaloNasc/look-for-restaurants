@@ -1,4 +1,4 @@
-# Sistema de Cadastro Salvus
+# Sistema de busca de restaurantes
 
 ## Descrição
 
@@ -6,7 +6,7 @@ Esse projeto foi realizado como parte do bootcamp LocalizaLabs na Digital Innova
 
 ### Necessidade apresentada
 
-1. Criar um buscador de restaurants utilizando a api do Google Maps;
+1. Criar um buscador de restaurantes utilizando a api do Google Maps;
 2. A aplicação deve ser capaz de realizar a busca na região do usuário ou em áreas de sua escolha.
 
 ### Tecnologias utilizadas
