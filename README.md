@@ -1,5 +1,9 @@
 # Sistema de busca de restaurantes
 
+<img height="350" align="center" src="https://user-images.githubusercontent.com/54161035/174724905-938246e6-fac3-44b1-ab3b-4d4fcf4c529d.png">
+
+##
+
 ## Descrição
 
 Esse projeto foi realizado como parte do bootcamp LocalizaLabs na Digital Innovation One.
